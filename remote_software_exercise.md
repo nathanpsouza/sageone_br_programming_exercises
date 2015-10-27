@@ -12,23 +12,23 @@ The following questions can be answered using any development language, please n
 
 1. Write a function accepting two floating-point numbers, returning the multiplication of the numbers together taking into account the following rules.
 
-  a. Each of the numbers provided to the function must be between 1500.0 and 6700.0.
-  b. Verify each of the received parameters is a floating-point number.
-  c. On return of the answer should be formatted to 5 decimal places.
-  d. Provide a number of test examples and the output.
+  - Each of the numbers provided to the function must be between 1500.0 and 6700.0.
+  - Verify each of the received parameters is a floating-point number.
+  - On return of the answer should be formatted to 5 decimal places.
+  - Provide a number of test examples and the output.
 
   ---
 
 2. Write a function accepting two string parameters returning true if the first parameter is a substring of the second.
 
-  a. `Parameter1 = “steven”, Parameter2 = “stevenbrown’, Output = true`
-  b. `Parameter1 = “Steven”, Parameter2 = “stevenbrown’, Output = false`
-  c. `Parameter1 = “steven”, Parameter2 = “st3v3nbrown’, Output = false`
-  d. `Parameter1 = “steven”, Parameter2 = “brownsteven’, Output = true`
-  e. Check that both Parameters have been provided.
-  f. Check that both Parameters are Strings.
-  g. Check that the length of the second Parameter is equal or larger than the first.
-  h. After writing the function we have decided that case sensitivity is not important, write another function that does not take Case Sensitivity into account.
+  - `Parameter1 = “steven”, Parameter2 = “stevenbrown’, Output = true`
+  - `Parameter1 = “Steven”, Parameter2 = “stevenbrown’, Output = false`
+  - `Parameter1 = “steven”, Parameter2 = “st3v3nbrown’, Output = false`
+  - `Parameter1 = “steven”, Parameter2 = “brownsteven’, Output = true`
+  - Check that both Parameters have been provided.
+  - Check that both Parameters are Strings.
+  - Check that the length of the second Parameter is equal or larger than the first.
+  - After writing the function we have decided that case sensitivity is not important, write another function that does not take Case Sensitivity into account.
 
   ---
 
