@@ -1,10 +1,10 @@
 # SageOne Brasil Local Programming Exercise.
 
-This exercise is intended to be applied in a face-to-face interview. You should answer these questions without using a computer or internet. Use only a pencil, a paper and you expertise. :smirk:
+This exercise is intended to be applied in a face-to-face interview. You should answer these questions without using a computer or internet. Use only a pencil, a paper and your expertise. :smirk:
 
 ### General Rules:
-- You can write the answer using any programming language. The goal here is not to evaluate your Ruby experience. Dont care about the perfect syntax. The goal is to see your familiarity with algorithms and logic skills.
-- You **CANT** use modern languages helpers functions. You cant use Ruby's `.to_s` or `.to_i` for instance. You can **only** basic code structures and data types.
+- You can write the answer using any programming language. The goal here is not to evaluate your Ruby experience. Do not care about the perfect syntax. The goal is to see your familiarity with algorithms and logic skills.
+- You **CAN'T** use modern languages helpers functions. You can't use Ruby's `.to_s` or `.to_i`, for instance. You can code **only** basic structures and data types.
 
 
 ### Exercices:
@@ -24,11 +24,11 @@ This exercise is intended to be applied in a face-to-face interview. You should 
   # should return 'ocraM'
   ```
 
-  > TIP: You can assume that a string is an Array of characters with no problem.
+  > TIP: It is okay to assume that a string is an Array of characters.
 
   ---
 
-3. Write a function that convert an `Integer` to a `String`. **Remember:** you **cant** use existing helper functions like `1234.to_s` :cry:
+3. Write a function that convert an `Integer` to a `String`. **Remember:** you **can't** use existing helper functions like `1234.to_s` :cry:
 
   ```ruby
   integer_to_string(1234)
@@ -36,7 +36,7 @@ This exercise is intended to be applied in a face-to-face interview. You should 
   ```
   ---
 
-4. Now the oposite, write a function that convert a `String` to an `Integer`. Again, you **cant** use existing helper functions like `"7485".to_i`.
+4. Now the oposite, write a function that convert a `String` to an `Integer`. Again, you **can't** use existing helper functions like `"7485".to_i`.
 
   ```ruby
   string_to_integer("7485")
