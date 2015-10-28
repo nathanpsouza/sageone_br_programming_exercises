@@ -36,7 +36,7 @@ This exercise is intended to be applied in a face-to-face interview. You should 
   ```
   ---
 
-4. Now the oposite, write a function that convert a `String` to an `Integer`. Again, you **can't** use existing helper functions like `"7485".to_i`.
+4. Now the opposite, write a function that convert a `String` to an `Integer`. Again, you **can't** use existing helper functions like `"7485".to_i`.
 
   ```ruby
   string_to_integer("7485")
