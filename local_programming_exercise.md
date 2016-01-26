@@ -56,3 +56,9 @@ This exercise is intended to be applied in a face-to-face interview. You should 
   
   ```
   ---
+6. What will this line of Ruby code return and why?
+
+  ```ruby
+  true and 0 && !nil and 3 > 2
+  ```
+  ---
