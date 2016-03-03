@@ -43,3 +43,22 @@ This exercise is intended to be applied in a face-to-face interview. You should 
   # should return 7485
   ```
   ---
+
+5. Write the function fizzbuzz. If a number is divisible by 3, return "Fizz". If a number is divisible by 5, return "Buzz". If a number is divisible by 3 and 5, return "FizzBuzz"
+
+ ```ruby
+  fizzbuzz(3)
+  # should return "Fizz"
+  fizzbuzz(5)
+  # should return "Buzz"
+  fizzbuzz(5175)
+  # should return "FizzBuzz"
+  
+  ```
+  ---
+6. What will this line of Ruby code return and why?
+
+  ```ruby
+  true and 0 && !nil and 3 > 2
+  ```
+  ---
