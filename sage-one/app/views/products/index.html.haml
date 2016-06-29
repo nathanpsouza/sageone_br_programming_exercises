@@ -1,0 +1,16 @@
+%h1 Listagem de produtos
+= link_to "Cadastrar produto", new_product_path
+
+%table.table
+  %thead
+    %tr
+      %th Nome
+      %th Valor
+      %th Criado em
+      %th
+  %tbody
+    - if @products.empty?
+      %tr
+        %td(colspan="4") Ainda não há produtos cadastrados.
+    - else
+      = render @products

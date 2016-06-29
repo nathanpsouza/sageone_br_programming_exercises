@@ -1,0 +1,42 @@
+%h1= @product.name
+%p= @product.description
+
+%p
+  %strong Categoria:
+  = @product.category
+
+%p
+  %strong Código externo:
+  = @product.external_code
+
+%p
+  %strong Código de barras:
+  = @product.barcode
+
+%p
+  %strong NCM:
+  = @product.ncm
+
+%p
+  %strong Unidade:
+  = @product.unit
+
+%p
+  %strong Valor:
+  = number_to_currency @product.value
+
+%p
+  %strong Quantidade:
+  = @product.quantity
+
+%p
+  %strong Cadastrado em:
+  = l @product.created_at, format: :short
+
+%p
+  %strong Última alteração em:
+  = l @product.updated_at, format: :short
+
+= link_to "Voltar para listagem", products_path
+= link_to "Editar", edit_product_path(@product)
+= link_to "Remover", product_path(@product), method: :delete

@@ -1,0 +1,8 @@
+%tr{id: "product_#{product.id}"}
+  %th= product.name
+  %th= number_to_currency product.value
+  %th= l product.created_at, format: :short
+  %th
+    = link_to 'Ver', product_path(product)
+    = link_to 'Editar', edit_product_path(product)
+    = link_to 'Remover', product_path(product), method: :delete

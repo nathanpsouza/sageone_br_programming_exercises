@@ -1,0 +1,16 @@
+pt-BR:
+  activerecord:
+    models:
+      product:
+        one: Produto
+        other: Produtos
+    attributes:
+      product:
+        name: Nome
+        category: Categoria
+        external_code: Código externo
+        description: Descrição
+        barcode: Código de barras
+        unit: Unidade
+        value: Valor
+        quantity: Quantidade
