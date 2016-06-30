@@ -2,7 +2,7 @@ class ProductsController < ApplicationController
   before_action :load_product, except: [:index, :new, :create, :import]
 
   def index
-    @products = Product.page(params[:page]).per(5)
+    @products = Product.page(params[:page]).per(20)
     @import_file = ImportFile.new
   end
 
