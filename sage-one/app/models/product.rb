@@ -23,4 +23,6 @@
 class Product < ActiveRecord::Base
   validates :name, presence: true
   validates :value, numericality: true
+
+  
 end

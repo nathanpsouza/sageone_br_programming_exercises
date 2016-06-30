@@ -13,34 +13,4 @@
 /tmp
 
 /config/database.yml
-
-"Categoria";
-"Categoria";
-"Unidade";
-"Descrição";
-"Identificação";
-"Custo";
-"Preço de Venda 1";
-"Observações";
-"Fornecedor";
-"Estoque";
-"Cód. Barra";
-"Preço de Venda 2";
-"Preço de Venda 3";
-"Estoque Mínimo";
-"Estoque Máximo";
-"Estoque Compra";
-"Fator unid. de venda";
-"NCM";
-"Marca";
-"Peso";
-"Tamanho";
-"Inativo";
-"Tipo";
-"Categoria";
-"Categoria";
-"Composição";
-"Matéria Prima";
-"Material Expediente";
-"Para Venda";
-"Moeda"
+.byebug_history
