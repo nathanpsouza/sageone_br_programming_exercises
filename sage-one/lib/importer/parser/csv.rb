@@ -2,7 +2,7 @@ module Importer::Parser
   class Csv < Base
     def read_csv
       f = File.read(@file_path, encoding: 'windows-1252:utf-8')
-      csv = CSV.parse(f.gsub(/\r/, ''), col_sep: ';', headers: false)
+      csv = CSV.parse(sanitize_csv(f), col_sep: ';', headers: false)
     end
 
     def load_records
@@ -28,6 +28,20 @@ module Importer::Parser
         value: normalize_decimal(row[12] || row[11] || row[6]),
         quantity: row[9]
       }
+    end
+
+    def valid_file?
+      header = File.open(@file_path, encoding: 'windows-1252:utf-8', &:readline)
+      begin
+        csv = CSV.parse(sanitize_csv(header), col_sep: ';', headers: false)
+        return csv.first.size == 30
+      rescue Exception => e
+        return false
+      end
+    end
+
+    def sanitize_csv string
+      string.gsub(/\r/, '')
     end
   end
 end

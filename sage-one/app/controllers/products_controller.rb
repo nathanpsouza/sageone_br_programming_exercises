@@ -51,13 +51,20 @@ class ProductsController < ApplicationController
   end
 
   def import
-    @imported_file = ImportFile.create(params.require(:import_file).permit(:file))
+    @imported_file = ImportFile.new(params.fetch(:import_file, {}).permit(:file))
 
-    if @imported_file.persisted?
-      importer = Importer::Base.new(@imported_file.file.path)
-      importer.import
-      redirect_to products_path
+    if @imported_file.save
+      begin
+        importer = Importer::Base.new(@imported_file.file.path)
+        importer.import
+      rescue Exception => ex
+        flash[:error] = "Arquivo em formato inválido"    
+      end
+    else
+      flash[:error] = "Arquivo em formato inválido"    
     end
+
+    redirect_to products_path
   end
 
   private

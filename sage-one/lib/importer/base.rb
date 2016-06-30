@@ -14,6 +14,8 @@ module Importer
     end
 
     def import
+      raise Importer::Parser::InvalidImportFile.new("Invalid file format") unless @parser.valid_file?
+
       records = @parser.parse
 
       ActiveRecord::Base.transaction do
@@ -21,7 +23,6 @@ module Importer
           product = Product.create(record)
         end
       end
-
     end
 
     private 

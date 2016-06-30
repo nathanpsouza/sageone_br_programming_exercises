@@ -29,5 +29,11 @@ module Importer::Parser
         quantity: row[12]
       }
     end
+
+    def valid_file?
+      header = File.open(@file_path, &:readline)
+      header = header.gsub("\n", "")
+      /\A([a-zA-Z]*\|\d*)\z/.match(header).nil? ? false : true
+    end
   end
 end

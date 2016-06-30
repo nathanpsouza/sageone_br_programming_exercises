@@ -247,11 +247,17 @@ RSpec.describe ProductsController, type: :controller do
 
   describe '#import' do
     let(:import_file) { FactoryGirl.attributes_for(:import_file) }
+    let(:invalid_import_file) { FactoryGirl.attributes_for(:invalid_import_file) }
 
     it 'create products from file' do
       expect {
         post :import, import_file: import_file
       }.to change(Product, :count).by(3)
+    end
+
+    it 'set flash error with message when file is invalid' do
+      post :import, import_file: invalid_import_file
+      expect(controller).to set_flash[:error]
     end
   end
 end
