@@ -21,6 +21,7 @@ module Importer
       ActiveRecord::Base.transaction do
         records.each do |record|
           product = Product.create(record)
+          raise Exception.new("Invalid record") unless product.persisted?
         end
       end
     end

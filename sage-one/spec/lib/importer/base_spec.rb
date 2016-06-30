@@ -1,6 +1,7 @@
 require 'rails_helper'
 describe Importer::Base do 
   let(:csv) { File.join(Rails.root, 'spec', 'support', 'product', 'import', 'bluebill_product_file.csv') }
+  let(:invalid_product_on_csv) { File.join(Rails.root, 'spec', 'support', 'product', 'import', 'bluebill_with_invalid_product.csv') }
   let(:txt) { File.join(Rails.root, 'spec', 'support', 'product', 'import', 'youdoinvoice_product_file.txt') }
   let(:invalid_file) { File.join(Rails.root, 'spec', 'support', 'product', 'import', 'invalid_format.txt') }
 
@@ -43,6 +44,13 @@ describe Importer::Base do
       expect{
         txt_importer.import
       }.to change(Product, :count).by(4)
+    end
+
+    it 'not save registers if any product is invalid' do
+      importer = Importer::Base.new(invalid_product_on_csv)
+      expect{
+        importer.import
+      }.to raise_error "Invalid record"
     end
 
     it 'raise InvalidImportFile if file is not valid' do
