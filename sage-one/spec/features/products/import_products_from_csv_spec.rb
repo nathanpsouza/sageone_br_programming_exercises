@@ -13,7 +13,7 @@ feature 'Import products from csv', js: true do
     click_button 'Importar'
     
     ["Carteira Multi-uso em Couro", "Carteira Feminino", "Porta Moedas em Couro"].each do |product|
-      expect(page).to have_content(product.name)
+      expect(page).to have_content(product)
     end
   end
 end

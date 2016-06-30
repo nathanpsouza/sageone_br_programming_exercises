@@ -13,7 +13,5 @@ class CreateProducts < ActiveRecord::Migration
 
       t.timestamps null: false
     end
-
-    add_index :products, :name, unique: true
   end
 end
