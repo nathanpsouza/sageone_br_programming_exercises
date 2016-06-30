@@ -1,5 +1,5 @@
 require 'rails_helper'
-describe Importer::Base do 
+describe Importer::Parser::Csv do 
   let(:file) { File.join(Rails.root, 'spec', 'support', 'product', 'import', 'bluebill_product_file.csv') }
   let(:invalid_file) { File.join(Rails.root, 'spec', 'support', 'product', 'import', 'invalid_format.csv') }
 

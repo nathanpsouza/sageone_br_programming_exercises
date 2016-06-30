@@ -1,5 +1,5 @@
 require 'rails_helper'
-describe Importer::Base do 
+describe Importer::Parser::Txt do 
   let(:file) { File.join(Rails.root, 'spec', 'support', 'product', 'import', 'youdoinvoice_product_file.txt') }
   let(:invalid_file) { File.join(Rails.root, 'spec', 'support', 'product', 'import', 'invalid_format.txt') }
 

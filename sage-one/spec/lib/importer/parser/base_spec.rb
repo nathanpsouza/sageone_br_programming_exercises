@@ -1,5 +1,5 @@
 require 'rails_helper'
-describe Importer::Base do 
+describe Importer::Parser::Base do 
   let(:file) { File.join(Rails.root, 'spec', 'support', 'product', 'import', 'bluebill_product_file.csv') }
 
   subject { Importer::Parser::Base.new(file) }
