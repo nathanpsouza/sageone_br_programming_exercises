@@ -244,4 +244,14 @@ RSpec.describe ProductsController, type: :controller do
       end
     end
   end
+
+  describe '#import' do
+    let(:import_file) { FactoryGirl.attributes_for(:import_file) }
+
+    it 'create products from file' do
+      expect {
+        post :import, import_file: import_file
+      }.to change(Product, :count).by(3)
+    end
+  end
 end

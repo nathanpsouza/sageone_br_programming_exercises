@@ -1,8 +1,9 @@
 class ProductsController < ApplicationController
-  before_action :load_product, except: [:index, :new, :create]
+  before_action :load_product, except: [:index, :new, :create, :import]
 
   def index
     @products = Product.all
+    @import_file = ImportFile.new
   end
 
   def new 
@@ -47,6 +48,16 @@ class ProductsController < ApplicationController
     end
 
     redirect_to products_path
+  end
+
+  def import
+    @imported_file = ImportFile.create(params.require(:import_file).permit(:file))
+
+    if @imported_file.persisted?
+      importer = Importer::Base.new(@imported_file.file.path)
+      importer.import
+      redirect_to products_path
+    end
   end
 
   private

@@ -54,5 +54,9 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
   root to: 'products#index'
-  resources :products
+  resources :products do
+    collection do
+      post 'import'
+    end
+  end
 end
