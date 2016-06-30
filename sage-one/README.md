@@ -2,6 +2,7 @@
 
 ## Dependências
 
+* Ruby 2.3.1
 * Postgresql
 * PhantomJS para executar os testes do RSpec
 
